@@ -25,6 +25,31 @@ APS MPA/
 
 ## Resultados
 
+As métricas utilizadas para avaliar os modelos foram:
+
+- **Matriz de confusão**: tabela que relaciona as classes verdadeiras com as classes preditas, destacando acertos na diagonal principal e erros fora dela. Permite identificar padrões específicos de confusão entre classes.
+
+- **Curvas ROC (One-Versus-All)**: conjunto de curvas ROC, uma para cada classe, em que cada classe é tratada como positiva e todas as outras como negativas. Mostra a capacidade do modelo de separar corretamente cada classe individualmente em termos de taxa de verdadeiros positivos e falsos positivos.
+
+- **Acurácia**: proporção de previsões corretas em relação ao total de exemplos.
+
+  \[
+  \text{Acurácia} = \frac{\text{número de acertos}}{\text{total de exemplos}}
+  \]
+
+- **Macro F1-score**: média harmônica entre precisão e revocação, calculada separadamente para cada classe e depois agregada.
+
+  \[
+  \text{Macro F1} = \frac{1}{K} \sum_{i=1}^{K} \text{F1-score}_i
+  \]
+
+- **Log Loss** (entropia cruzada): mede a negatividade logarítmica da probabilidade atribuída à classe correta.
+
+  \[
+  \text{Log Loss} = -\frac{1}{N} \sum_{i=1}^{N} \log(p_{\text{correto}}^{(i)})
+  \]
+
+
 ### MNIST Padrao
 
 O primeiro conjunto de experimentos foi realizado com a base MNIST original, composta por imagens de dígitos manuscritos (28×28 pixels, em tons de cinza), bem centralizadas e com pouco ruído. Os modelos treinados foram uma Rede Neural Convolucional (CNN), uma Rede Neural Feedforward (MLP) e uma Random Forest (RF). Todos os modelos foram avaliados com base em métricas clássicas de classificação multiclasse.
