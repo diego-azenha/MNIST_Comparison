@@ -1,5 +1,6 @@
 ## Estrutura do projeto
 
+```
 APS MPA/
 ├── ConvNN.py              # Definição e treinamento da rede neural convolucional (CNN)
 ├── MLP.py                 # Definição e treinamento da rede MLP fully-connected
@@ -20,7 +21,7 @@ APS MPA/
 ├── modelos/               # (Opcional) Diretório para salvar pesos dos modelos treinados
 ├── results/               # Gráficos, métricas e arquivos gerados durante os testes
 └── .venv/                 # Ambiente virtual Python (opcional, mas recomendado)
-
+```
 
 ## Resultados
 
