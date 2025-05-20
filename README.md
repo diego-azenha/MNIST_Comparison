@@ -31,23 +31,18 @@ As métricas utilizadas para avaliar os modelos foram:
 
 - **Curvas ROC (One-Versus-All)**: conjunto de curvas ROC, uma para cada classe, em que cada classe é tratada como positiva e todas as outras como negativas. Mostra a capacidade do modelo de separar corretamente cada classe individualmente em termos de taxa de verdadeiros positivos e falsos positivos.
 
-- **Acurácia**: proporção de previsões corretas em relação ao total de exemplos.
+- **Acurácia**: número de acertos dividido pelo total de exemplos.
 
-  \[
-  \text{Acurácia} = \frac{\text{número de acertos}}{\text{total de exemplos}}
-  \]
+  Acurácia = (número de acertos) / (total de exemplos)
 
-- **Macro F1-score**: média harmônica entre precisão e revocação, calculada separadamente para cada classe e depois agregada.
+- **Macro F1-score**: média do F1-score calculado individualmente para cada classe.
 
-  \[
-  \text{Macro F1} = \frac{1}{K} \sum_{i=1}^{K} \text{F1-score}_i
-  \]
+  Macro F1 = (F1_1 + F1_2 + ... + F1_K) / K
 
-- **Log Loss** (entropia cruzada): mede a negatividade logarítmica da probabilidade atribuída à classe correta.
+- **Log Loss**: média da entropia cruzada entre a probabilidade predita para a classe correta e o valor real.
 
-  \[
-  \text{Log Loss} = -\frac{1}{N} \sum_{i=1}^{N} \log(p_{\text{correto}}^{(i)})
-  \]
+  Log Loss = – (1/N) × Σ log(p_classe_correta)
+
 
 
 ### MNIST Padrao
