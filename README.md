@@ -1,3 +1,27 @@
+## Estrutura do projeto
+
+APS MPA/
+├── ConvNN.py              # Definição e treinamento da rede neural convolucional (CNN)
+├── MLP.py                 # Definição e treinamento da rede MLP fully-connected
+├── RandomForest.py        # Implementação do classificador Random Forest usando Scikit-Learn
+├── main.py                # Script principal para rodar os modelos e gerar métricas
+├── metrics.py             # Geração de gráficos (ROC, matriz de confusão) e métricas detalhadas
+├── data_loader.py         # Funções de carregamento e pré-processamento de MNIST e MNIST-C
+├── README.md              # Documentação do projeto
+├── requirements.txt       # Dependências necessárias para executar o projeto
+│
+├── data/                  # Dados originais do MNIST (baixados automaticamente pelo torchvision)
+│
+├── mnist_c/               # Versão corrompida do MNIST (MNIST-C), organizada por tipo de distorção
+│   ├── brightness/
+│   ├── shot_noise/
+│   └── ...                # Outras corrupções (motion_blur, fog, etc.)
+│
+├── modelos/               # (Opcional) Diretório para salvar pesos dos modelos treinados
+├── results/               # Gráficos, métricas e arquivos gerados durante os testes
+└── .venv/                 # Ambiente virtual Python (opcional, mas recomendado)
+
+
 ## Resultados
 
 ### MNIST Padrao
