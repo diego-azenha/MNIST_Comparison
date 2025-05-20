@@ -31,7 +31,7 @@ O primeiro conjunto de experimentos foi realizado com a base MNIST original, com
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
-| **CNN**          | 0.991    | 0.9909   | **0.0268** ✅ |
+| **CNN**          | **0.991**    | **0.9909**   | **0.0268** ✅ |
 | **MLP**          | 0.974    | 0.9733   | 0.0900 ⚠️ |
 | **Random Forest**| 0.970    | 0.9702   | **0.2466** 🔴 |
 
@@ -61,7 +61,7 @@ As métricas consideradas foram acurácia, macro F1-score e log loss (entropia c
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
-| **CNN**          | 0.982    | 0.9816   | **0.0543** ✅ |
+| **CNN**          | **0.982**   | **0.9816**   | **0.0543** ✅ |
 | **MLP**          | 0.927    | 0.9251   | 0.2637 ⚠️ |
 | **Random Forest**| 0.971    | 0.9704   | **0.3017** 🔴 |
 
@@ -69,7 +69,7 @@ As métricas consideradas foram acurácia, macro F1-score e log loss (entropia c
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
-| **CNN**          | 0.979    | 0.9776   | **0.0618** ✅ |
+| **CNN**          | **0.979**    | **0.9776**   | **0.0618** ✅ |
 | **MLP**          | 0.955    | 0.9531   | 0.1606 ⚠️ |
 | **Random Forest**| 0.955    | 0.9534   | **0.4516** 🔴 |
 
@@ -78,7 +78,7 @@ As métricas consideradas foram acurácia, macro F1-score e log loss (entropia c
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
-| **CNN**          | 0.977    | 0.9761   | **0.0658** ✅ |
+| **CNN**          | **0.977**    | **0.9761**   | **0.0658** ✅ |
 | **MLP**          | 0.956    | 0.9542   | 0.1388 ⚠️ |
 | **Random Forest**| 0.964    | 0.9628   | **0.3317** 🔴 |
 
