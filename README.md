@@ -35,11 +35,11 @@ As métricas utilizadas para avaliar os modelos foram:
 
   Acurácia = (número de acertos) / (total de exemplos)
 
-- **Macro F1-score**: média do F1-score calculado individualmente para cada classe.
+- **Macro F1-score**: é a média simples do F1-score calculado separadamente para cada classe. O F1-score combina precisão (quantos dos positivos previstos estão corretos) e revocação (quantos dos positivos reais foram identificados) em uma única métrica por classe. No macro F1, cada classe tem o mesmo peso, independentemente de quantas amostras ela tem.
 
   Macro F1 = (F1_1 + F1_2 + ... + F1_K) / K
 
-- **Log Loss**: média da entropia cruzada entre a probabilidade predita para a classe correta e o valor real.
+- **Log Loss**: mede o quão bem calibradas estão as probabilidades atribuídas pelo modelo. Para cada exemplo, considera apenas a probabilidade que o modelo deu à classe correta. Previsões confiantes e corretas geram penalidades baixas; previsões erradas e confiantes geram penalidades altas.
 
   Log Loss = – (1/N) × Σ log(p_classe_correta)
 
