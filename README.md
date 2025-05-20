@@ -44,7 +44,6 @@ As métricas utilizadas para avaliar os modelos foram:
   Log Loss = – (1/N) × Σ log(p_classe_correta)
 
 
-
 ### MNIST Padrao
 
 O primeiro conjunto de experimentos foi realizado com a base MNIST original, composta por imagens de dígitos manuscritos (28×28 pixels, em tons de cinza), bem centralizadas e com pouco ruído. Os modelos treinados foram uma Rede Neural Convolucional (CNN), uma Rede Neural Feedforward (MLP) e uma Random Forest (RF). Todos os modelos foram avaliados com base em métricas clássicas de classificação multiclasse.
@@ -70,6 +69,15 @@ A CNN apresentou desempenho superior em todas as métricas, com maior precisão 
 
 Matrizes de confusão e curvas ROC One-vs-All para cada modelo (disponíveis na pasta /results).
 
+![CNN_MNIST_roc_ova](https://github.com/user-attachments/assets/97fc724d-2147-427f-ac6a-5217366fa2fb)
+![CNN_MNIST_confusion_matrix](https://github.com/user-attachments/assets/da8c8010-bfec-4efc-9d84-4e0135693e93)
+
+![MLP_MNIST_roc_ova](https://github.com/user-attachments/assets/9af86c50-7a29-494f-9db1-c220bbca0e72)
+![MLP_MNIST_confusion_matrix](https://github.com/user-attachments/assets/58d66996-3e5d-4fea-a271-ca56ff7f97ae)
+
+![RF_MNIST_roc_ova](https://github.com/user-attachments/assets/e79f76d4-8f28-4d05-ab6a-a5e67f8b5357)
+![RF_MNIST_confusion_matrix](https://github.com/user-attachments/assets/2fc2edbb-9545-4ca2-b590-c1a45fb8f1c3)
+
 
 ### MNIST-C
 
@@ -77,7 +85,7 @@ Para avaliar a robustez dos modelos em condições adversas mais próximas de ap
 
 As métricas consideradas foram acurácia, macro F1-score e log loss (entropia cruzada), esta última sendo crucial para medir calibração de confiança dos modelos.
 
-#### Corrupcao: brightness (severidade 5)
+#### Corrupção: brightness (severidade 5)
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
@@ -85,7 +93,7 @@ As métricas consideradas foram acurácia, macro F1-score e log loss (entropia c
 | **MLP**          | 0.927    | 0.9251   | 0.2637 ⚠️ |
 | **Random Forest**| 0.971    | 0.9704   | **0.3017** 🔴 |
 
-#### Corrupcao: shot-noise (severidade 5)
+#### Corrupção: shot-noise (severidade 5)
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
@@ -94,7 +102,7 @@ As métricas consideradas foram acurácia, macro F1-score e log loss (entropia c
 | **Random Forest**| 0.955    | 0.9534   | **0.4516** 🔴 |
 
 
-#### Corrupcao: motion-blur (severidade 5)
+#### Corrupção: motion-blur (severidade 5)
 
 | Modelo           | Acurácia | Macro F1 | Log Loss |
 |------------------|----------|----------|----------|
