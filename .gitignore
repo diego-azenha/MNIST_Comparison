@@ -1,3 +1,5 @@
 /.venv
 /mnist_c
 /modelos
+/_pycache_
+/data
