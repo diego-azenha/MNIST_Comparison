@@ -44,7 +44,7 @@ As métricas utilizadas para avaliar os modelos foram:
   Log Loss = – (1/N) × Σ log(p_classe_correta)
 
 
-### MNIST Padrao
+### MNIST Padrão
 
 O primeiro conjunto de experimentos foi realizado com a base MNIST original, composta por imagens de dígitos manuscritos (28×28 pixels, em tons de cinza), bem centralizadas e com pouco ruído. Os modelos treinados foram uma Rede Neural Convolucional (CNN), uma Rede Neural Feedforward (MLP) e uma Random Forest (RF). Todos os modelos foram avaliados com base em métricas clássicas de classificação multiclasse.
 
@@ -67,16 +67,37 @@ A CNN apresentou desempenho superior em todas as métricas, com maior precisão 
 
 #### Gráficos gerados:
 
-Matrizes de confusão e curvas ROC One-vs-All para cada modelo (disponíveis na pasta /results).
+#### Gráficos gerados:
 
-![CNN_MNIST_roc_ova](https://github.com/user-attachments/assets/97fc724d-2147-427f-ac6a-5217366fa2fb)
-![CNN_MNIST_confusion_matrix](https://github.com/user-attachments/assets/da8c8010-bfec-4efc-9d84-4e0135693e93)
+Matrizes de confusão e curvas ROC One-vs-All para cada modelo (disponíveis na pasta `/results`).
 
-![MLP_MNIST_roc_ova](https://github.com/user-attachments/assets/9af86c50-7a29-494f-9db1-c220bbca0e72)
-![MLP_MNIST_confusion_matrix](https://github.com/user-attachments/assets/58d66996-3e5d-4fea-a271-ca56ff7f97ae)
+---
 
-![RF_MNIST_roc_ova](https://github.com/user-attachments/assets/e79f76d4-8f28-4d05-ab6a-a5e67f8b5357)
-![RF_MNIST_confusion_matrix](https://github.com/user-attachments/assets/2fc2edbb-9545-4ca2-b590-c1a45fb8f1c3)
+**CNN – MNIST**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/da8c8010-bfec-4efc-9d84-4e0135693e93" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/97fc724d-2147-427f-ac6a-5217366fa2fb" width="45%"/>
+</p>
+
+---
+
+**MLP – MNIST**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/58d66996-3e5d-4fea-a271-ca56ff7f97ae" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/9af86c50-7a29-494f-9db1-c220bbca0e72" width="45%"/>
+</p>
+
+---
+
+**Random Forest – MNIST**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2fc2edbb-9545-4ca2-b590-c1a45fb8f1c3" width="45%"/>
+  <img src="https://github.com/user-attachments/assets/e79f76d4-8f28-4d05-ab6a-a5e67f8b5357" width="45%"/>
+</p>
+
 
 
 ### MNIST-C
