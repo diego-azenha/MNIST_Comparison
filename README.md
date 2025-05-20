@@ -1,0 +1,59 @@
+## Resultados
+
+### MNIST Padrao
+
+O primeiro conjunto de experimentos foi realizado com a base MNIST original, composta por imagens de dígitos manuscritos (28×28 pixels, em tons de cinza), bem centralizadas e com pouco ruído. Os modelos treinados foram uma Rede Neural Convolucional (CNN), uma Rede Neural Feedforward (MLP) e uma Random Forest (RF). Todos os modelos foram avaliados com base em métricas clássicas de classificação multiclasse.
+
+| Modelo           | Acurácia | Macro F1 | Log Loss |
+|------------------|----------|----------|----------|
+| **CNN**          | 0.991    | 0.9909   | **0.0268** ✅ |
+| **MLP**          | 0.974    | 0.9733   | 0.0900 ⚠️ |
+| **Random Forest**| 0.970    | 0.9702   | **0.2466** 🔴 |
+
+
+A CNN apresentou desempenho superior em todas as métricas, com maior precisão e menor entropia (log loss). O MLP também obteve resultados robustos, embora com pequenas quedas em classes mais visuais como 2, 3 e 8. A Random Forest, apesar de competitiva em acurácia, mostrou-se menos calibrada — evidenciado por um log loss mais alto.
+
+#### Análise Qualitativa
+
+- CNN: Erros residuais concentrados em dígitos visualmente ambíguos (como 5 vs 3 ou 9 vs 4), mas com excelente generalização.
+
+- MLP: Desempenho sólido, mas mais sensível a variações sutis de traço.
+
+- RF: Forte capacidade de classificação geral, porém mais suscetível a confusões entre dígitos parecidos, especialmente em regiões limítrofes do espaço de decisão.
+
+#### Gráficos gerados:
+
+Matrizes de confusão e curvas ROC One-vs-All para cada modelo (disponíveis na pasta /results).
+
+
+### MNIST-C
+
+Para avaliar a robustez dos modelos em condições adversas mais próximas de aplicações reais, testamos CNN, MLP e Random Forest sobre a base MNIST-C, que introduz distorções visuais sistemáticas aos dígitos manuscritos. Utilizamos as corrupções shot_noise e motion_blur, ambas com severidade 5, representando cenários difíceis, porém legíveis.
+
+As métricas consideradas foram acurácia, macro F1-score e log loss (entropia cruzada), esta última sendo crucial para medir calibração de confiança dos modelos.
+
+#### Corrupcao: brightness (severidade 5)
+
+| Modelo           | Acurácia | Macro F1 | Log Loss |
+|------------------|----------|----------|----------|
+| **CNN**          | 0.982    | 0.9816   | **0.0543** ✅ |
+| **MLP**          | 0.927    | 0.9251   | 0.2637 ⚠️ |
+| **Random Forest**| 0.971    | 0.9704   | **0.3017** 🔴 |
+
+#### Corrupcao: shot-noise (severidade 5)
+
+| Modelo           | Acurácia | Macro F1 | Log Loss |
+|------------------|----------|----------|----------|
+| **CNN**          | 0.979    | 0.9776   | **0.0618** ✅ |
+| **MLP**          | 0.955    | 0.9531   | 0.1606 ⚠️ |
+| **Random Forest**| 0.955    | 0.9534   | **0.4516** 🔴 |
+
+
+#### Corrupcao: motion-blur (severidade 5)
+
+| Modelo           | Acurácia | Macro F1 | Log Loss |
+|------------------|----------|----------|----------|
+| **CNN**          | 0.977    | 0.9761   | **0.0658** ✅ |
+| **MLP**          | 0.956    | 0.9542   | 0.1388 ⚠️ |
+| **Random Forest**| 0.964    | 0.9628   | **0.3317** 🔴 |
+
